@@ -1,1 +1,0 @@
-cmd_/home/dach/modules/testdevice.ko := ld -r -m elf_i386 -T /usr/src/linux-headers-3.5.0-25-generic/scripts/module-common.lds --build-id  -o /home/dach/modules/testdevice.ko /home/dach/modules/testdevice.o /home/dach/modules/testdevice.mod.o

@@ -4,3 +4,6 @@
 *.mod.c
 *.mod.o
 *.o
+.my*
+.tes*
+.tem_*

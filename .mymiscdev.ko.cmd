@@ -1,1 +1,0 @@
-cmd_/home/ubuntu/miscdev/mymiscdev.ko := ld -EL -r  -T /usr/src/linux-headers-3.2.33-psp26.1/scripts/module-common.lds --build-id  -o /home/ubuntu/miscdev/mymiscdev.ko /home/ubuntu/miscdev/mymiscdev.o /home/ubuntu/miscdev/mymiscdev.mod.o
