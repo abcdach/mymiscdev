@@ -2,4 +2,3 @@
 
 insmod mymiscdev.ko
 dmesg
-ls /dev/my*
