@@ -2,3 +2,8 @@ mymiscdev პროექტის აღწერილობა:
 
 mymiscdev -  არის Beaglebone-ს 90 დოლარიანი ვერსის Miscellaneous Character Drivers - ტიპის 
 დრაივერი. 
+
+დრაივერის ტესტირება:
+დრივერის გაშვებისას dev დირექტორიაში გაცჰნდება 111 ფაილი
+sudo -s
+sudo cat xxx > /dev/111
