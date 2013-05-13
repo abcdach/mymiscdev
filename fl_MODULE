@@ -1,0 +1,5 @@
+#!/bin/bash/
+
+mknod /dev/gpio c 60 0'
+chmod 666 /dev/gpio'
+ls -la /dev/gpio
