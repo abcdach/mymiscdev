@@ -2,5 +2,4 @@
 
 rmmod mymiscdev.ko
 dmesg
-ls /dev/my*
 
