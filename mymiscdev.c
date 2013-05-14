@@ -1,3 +1,5 @@
+// ამ კოდის ავტორი: დავით ჩხაიძე ( ილიაუნი )
+
 #include <linux/module.h>
 #include <linux/miscdevice.h>
 #include <linux/fs.h>
@@ -56,7 +58,7 @@ char *buff_pointer;			// იფორმაციის დაბრუნებ
 //########################################################
 static ssize_t MiscDev_read(struct file *filp, char *buffer, size_t length, loff_t * offset)
 {
-	int bytes_read = 0;			// ბაიტების რაოდება, რომელიც ჩაწერილა ბუფერში //Number of bytes actually written to the buffer 
+	int bytes_read = 0;			// ბაიტების რაოდება, რომელიც ჩაწერილია ბუფერში //Number of bytes actually written to the buffer 
 	if (*buff_pointer == 0){ return 0; }	// If we're at the end of the message, return 0 signifying end of file 
 	while (length && *buff_pointer) { 	// Actually put the data into the buffer 
 		put_user(*(buff_pointer++), buffer++);
