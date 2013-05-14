@@ -47,7 +47,7 @@
 #define DRVNAME "FPGA_Prog >> "
 #define INF(fmt, ...)	printk(KERN_INFO "%s" fmt " \n", DRVNAME, ##__VA_ARGS__)
 
-#define Miscdev_FileName	"111"	// miscdevice - ფაილის სახელი 
+#define Miscdev_FileName	"111"	// miscdevice - ფაილის სახელი, dev დირექტორიაში
 char buff[3] ;				// იფორმაციის დაბრუნების ბუფერი
 char *buff_pointer;			// იფორმაციის დაბრუნების ბუფერის მიმთითებელი
 
@@ -56,7 +56,7 @@ char *buff_pointer;			// იფორმაციის დაბრუნებ
 //########################################################
 static ssize_t MiscDev_read(struct file *filp, char *buffer, size_t length, loff_t * offset)
 {
-	int bytes_read = 0;			// Number of bytes actually written to the buffer 
+	int bytes_read = 0;			// ბაიტების რაოდება, რომელიც ჩაწერილა ბუფერში //Number of bytes actually written to the buffer 
 	if (*buff_pointer == 0){ return 0; }	// If we're at the end of the message, return 0 signifying end of file 
 	while (length && *buff_pointer) { 	// Actually put the data into the buffer 
 		put_user(*(buff_pointer++), buffer++);
